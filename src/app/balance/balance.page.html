@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>List Produk</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<!--<p class="txt1">
+    This is an application made by Wira Dwi Susanto that can be used to perform transaction for pulse, data packed with the cheap prices offered.
+</p>-->
+<p class="txt1">
+Tersedia semua nominal pengisian pulsa reguler untuk setiap provider dan juga paket data internet. Semua produk pulsa dan paket data internet murah kami dapat dipakai di mana saja di seluruh Indonesia, tidak dibatasi regional / cluster.
+</p>
+
+<ion-list>
+        <ion-radio-group>
+          <ion-list-header>
+            <ion-label>Pilih Produk</ion-label>
+          </ion-list-header>
+      
+          <ion-item>
+            <ion-label>Pulsa All Operator</ion-label>
+            <ion-radio slot="start" #pulsaOpsel value="pulsaallopsel" (click)="toggleRadioButtonPulsa(pulsaOpsel.value)"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Paket Data Internet</ion-label>
+            <ion-radio slot="start" #paketData value="paketdatainternet" (click)="toggleRadioButtonPaketData(paketData.value)"></ion-radio>
+          </ion-item>
+
+        </ion-radio-group>
+      </ion-list>
+
+      <ion-list name="listopsel" id="listopsel" style="display: none;">
+            <ion-list-header>Pilih Operator</ion-list-header>
+          
+            <ion-item>
+              <ion-label>Operator</ion-label>
+              <ion-select placeholder="Silakan Pilih" #opselSelect [(ngModel)]="operatorList" (ionChange)="onChange(opselSelect.value)">
+                <ion-select-option value="tsel">Telkomsel</ion-select-option>
+                <ion-select-option value="isat">Indosat</ion-select-option>
+                <ion-select-option value="three">Three</ion-select-option>
+                <ion-select-option value="xl">XL</ion-select-option>
+                <ion-select-option value="axis">AXIS</ion-select-option>
+                <ion-select-option value="smartfren">Smartfren</ion-select-option>
+              </ion-select>
+            </ion-item>
+          
+        </ion-list>
+              
+        <ion-list name="listresult" id="listresult" style="display: none;">
+                <ion-list-header>
+                        <ion-label name="productLabelName" id="productLabelName">Pilih Produk</ion-label>
+                      </ion-list-header>
+              <ion-item>
+                <ion-thumbnail slot="start">
+                  <img src="{{imageSrc}}" id="img1">
+                </ion-thumbnail>
+                <ion-label>
+                  <h2 id="title1"></h2>
+                  <p id="desc1"></p>
+                </ion-label>
+                <ion-button fill="outline" slot="end" (click)="loginFirst()">Beli</ion-button>
+              </ion-item>
+
+              <ion-item>
+                    <ion-thumbnail slot="start">
+                      <img src="{{imageSrc}}" id="img2">
+                    </ion-thumbnail>
+                    <ion-label>
+                      <h2 id="title2"></h2>
+                      <p id="desc2"></p>
+                    </ion-label>
+                    <ion-button fill="outline" slot="end" (click)="loginFirst()">Beli</ion-button>
+                  </ion-item>
+        </ion-list>
+
+        <ion-button expand="block" (click)="lihatHasil()"><ion-icon name="search"></ion-icon> LIHAT HASIL</ion-button>
+</ion-content>

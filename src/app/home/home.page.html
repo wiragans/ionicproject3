@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card>
+<ion-card-header>
+<ion-card-subtitle class="headerbg"><b>Selamat Datang di Jagat Pulsa</b></ion-card-subtitle>
+</ion-card-header>
+<ion-card-content>
+    <ion-text style="color: grey;">
+        <h4><b>Jagat Pulsa</b> adalah sebuah aplikasi pembelian pulsa dan paket data internet all operator dengan harga murah. Semua produk yang kami tawarkan dapat digunakan di seluruh wilayah Indonesia.</h4>
+      </ion-text>
+</ion-card-content>
+</ion-card>
+
+<ion-card>
+    <ion-card-header>
+    <ion-card-subtitle class="headerbg"><b>Menu Layanan</b></ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+        <ion-text style="color: black;">
+          <div class="iconlogocontainer1" (click)="beliPulsa()">
+            <img class="iconlogo1" src="assets/icon/paymenticon1.png">
+            <p style="margin-left: 10px;">Pulsa</p>
+          </div>
+          <div class="iconlogocontainer1" (click)="beliPaketData()">
+              <img class="iconlogo1" src="assets/icon/paymenticon1.png">
+              <p style="margin-left: -10px;">Paket Data</p>
+            </div>
+            <div class="iconlogocontainer1" (click)="goDeposit()">
+                <img class="iconlogo1" src="assets/icon/paymenticon1.png">
+                <p style="margin-left: 2px;">Deposit</p>
+              </div>
+          </ion-text>
+    </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-header>
+        </ion-card-header>
+        <ion-card-content style="margin-top: -20px;">
+                <img class="daftarakunpremiumlogo" src="assets/icon/favicon.png">
+                <ion-text style="color: #007FFF;">
+                  <h2 class="daftarakunpremiumtitle"><b>Daftar Menjadi Akun Premium</b></h2>
+                </ion-text>
+                <ion-text style="color: black;">
+                  <p class="daftarakunpremiumtitle" style="font-weight: bold;">Nikmati berbagai keuntungan:</p>
+                </ion-text>
+                <ion-text style="color: grey;">
+                    <p class="daftarakunpremiumtitle">Anda dapat Top-Up saldo hingga 10 juta, pembelian pulsa dan paket data tanpa batasan/limit, dan lain-lainnya.</p>
+                </ion-text>
+        </ion-card-content>
+        </ion-card><br>
+
+<div style="margin-top: -8px;">
+<img style="height: auto; width: 90%; margin: auto; display: block;" src="assets/icon/promocashback1.png">
+</div>
+</ion-content>
