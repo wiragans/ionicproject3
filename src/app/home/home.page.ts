@@ -12,12 +12,12 @@ export class HomePage {
 
   beliPulsa()
   {
-    this.route.navigate(['/login']);
+    this.route.navigate(['/listproduk']);
   }
 
   beliPaketData()
   {
-    this.route.navigate(['/login']);
+    this.route.navigate(['/listproduk']);
   }
 
   goDeposit()

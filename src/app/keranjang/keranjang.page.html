@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Keranjang</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- INI HANYALAH PREVIEW MENU KERANJANG -->
+
+<ion-content>
+<ion-card style="margin-top: 20px;">
+        <ion-card-header>
+          <ion-card-subtitle style="font-size: 20px; color: #00AAFF;"><b>SELAMAT DATANG, WIRA</b></ion-card-subtitle>
+          <ion-card-title>Saldo Anda: Rp. 200.000</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content style="text-align: justify;">
+          Point Anda: 20 PTS<br>Kumpulan terus point Anda dengan melakukan pembelian produk dan dapatkan hadiah menarik dari kami.
+        </ion-card-content>
+</ion-card>
+
+<ion-list name="listCart" id="listCart" style="display: block;">
+<h4 style="font-weight: bold; margin-left: 20px; text-align: justify;">DAFTAR KERANJANG ANDA</h4>
+    <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="../assets/icon/tsel-icon.png" id="img1">
+        </ion-thumbnail>
+        <ion-label>
+          <h2 style="font-weight: bold;" id="titlecart1">TSEL 2GB 30D</h2>
+          <p id="desccart1">Harga: Rp. 22000</p>
+        </ion-label>
+        <div style="margin-top: 10px; margin-bottom: 10px;">
+        <ion-button style="display: block;" color="primary">CONFIRM</ion-button>
+        <ion-button style="display: block;" color="danger">CANCEL</ion-button>
+      </div>
+      </ion-item>
+
+<!-- INI HANYALAH PREVIEW MENU KERANJANG -->
+      <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="../assets/icon/tsel-icon.png" id="img1">
+          </ion-thumbnail>
+          <ion-label>
+            <h2 style="font-weight: bold;" id="titlecart1">TSEL 4GB 30D</h2>
+            <p id="desccart1">Harga: Rp. 40000</p>
+          </ion-label>
+          <div style="margin-top: 10px; margin-bottom: 10px;">
+          <ion-button style="display: block;" color="primary">CONFIRM</ion-button>
+          <ion-button style="display: block;" color="danger">CANCEL</ion-button>
+        </div>
+        </ion-item>
+</ion-list>
+<div style="margin-left: 20px; margin-right: 20px;">
+<ion-button style="width: 100%;" color="primary" (click)="backToListProduk()">KEMBALI KE LIST PRODUK</ion-button>
+</div>
+</ion-content>

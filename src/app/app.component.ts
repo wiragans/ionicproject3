@@ -18,19 +18,29 @@ export class AppComponent implements OnInit {
       icon: 'home'
     },
     {
-      title: 'About',
-      url: '/about',
-      icon: 'help-circle-outline'
+      title: 'Login',
+      url: '/login',
+      icon: 'exit'
     },
     {
       title: 'List Produk',
       url: '/listproduk',
-      icon: 'paper-plane'
+      icon: 'list'
     },
     {
-      title: 'Login',
-      url: '/login',
-      icon: 'exit'
+      title: 'Keranjang',
+      url: '/keranjang',
+      icon: 'cart'
+    },
+    {
+      title: 'Tambah Produk',
+      url: '/tambahproduk',
+      icon: 'add-circle'
+    },
+    {
+      title: 'About',
+      url: '/about',
+      icon: 'help-circle-outline'
     }
   ];
 
@@ -47,7 +57,7 @@ export class AppComponent implements OnInit {
     this.http.post('http://162.244.93.240/~kharisma/api/ionicapps/v1/get_token', {test: 'mantap'}, {
       headers: new HttpHeaders({
         'Content-Type':  'application/json',
-        'Authorization': 'Basic GZTkWPVA0z56b41HMeaMUgMGAV0'
+        'Authorization': 'Basic GZTkWPVA0z56b41HMeaMUgMGAV0' // BASIC AUTHORIZATION TOKEN NYA
       })
     })
       .subscribe(

@@ -13,7 +13,9 @@ const routes: Routes = [
   },
   { path: 'about', loadChildren: './about/about.module#AboutPageModule' },
   { path: 'listproduk', loadChildren: './balance/balance.module#BalancePageModule'},
-  { path: 'login', loadChildren: './login/login.module#LoginPageModule' }
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'keranjang', loadChildren: './keranjang/keranjang.module#KeranjangPageModule' },
+  { path: 'tambahproduk', loadChildren: './tambahproduk/tambahproduk.module#TambahprodukPageModule' }
 ];
 
 @NgModule({

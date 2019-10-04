@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-balance',
   templateUrl: './balance.page.html',
-  styleUrls: ['./balance.page.scss'],
+  styleUrls: ['./balance.page.scss'], 
 })
 export class BalancePage implements OnInit {
 
@@ -27,6 +27,7 @@ export class BalancePage implements OnInit {
   valueOpsel: string = "";
   showItem: boolean = false;
   showItem2: boolean = false;
+  sudahLogin: boolean = false;
 
   toggleRadioButtonPulsa(value)
   {
@@ -59,7 +60,7 @@ export class BalancePage implements OnInit {
         this.http.post('http://162.244.93.240/~kharisma/api/ionicapps/v1/get_product', {productName: this.valueProduct, opselName: this.valueOpsel}, {
       headers: new HttpHeaders({
         'Content-Type':  'application/json',
-        'Authorization': 'Bearer 7v6oFBH4cmuhqG339tBQdeUPp7jLqXJKpp1KVKUZ5YfshJQQtvTLvb9EyN6cq1Y7'
+        'Authorization': 'Bearer 7v6oFBH4cmuhqG339tBQdeUPp7jLqXJKpp1KVKUZ5YfshJQQtvTLvb9EyN6cq1Y7' // BEARER AUTHORIZATION TOKEN NYA
       })
     })
       .subscribe(
@@ -96,7 +97,7 @@ export class BalancePage implements OnInit {
         this.http.post('http://162.244.93.240/~kharisma/api/ionicapps/v1/get_product', {productName: this.valueProduct, opselName: this.valueOpsel}, {
       headers: new HttpHeaders({
         'Content-Type':  'application/json',
-        'Authorization': 'Bearer 7v6oFBH4cmuhqG339tBQdeUPp7jLqXJKpp1KVKUZ5YfshJQQtvTLvb9EyN6cq1Y7'
+        'Authorization': 'Bearer 7v6oFBH4cmuhqG339tBQdeUPp7jLqXJKpp1KVKUZ5YfshJQQtvTLvb9EyN6cq1Y7' // BEARER AUTHORIZATION TOKEN NYA
       })
     })
       .subscribe(
@@ -139,7 +140,16 @@ export class BalancePage implements OnInit {
 
   loginFirst()
   {
-    this.route.navigate(['/login']);
+    if(this.sudahLogin == false)
+    {
+      //this.route.navigate(['/login']);
+      this.route.navigate(['/keranjang']);
+    }
+
+    if(this.sudahLogin == true)
+    {
+      this.route.navigate(['/keranjang']);
+    }
   }
 
     async showTandaAlert()
